@@ -1,6 +1,5 @@
 <?php
 //Created By Aleksey Chudak For Provectus 
-//Object with input data is on string 283
 //I worked within only one class so in my opinion there is no place for polymorphism and inheritance
 class TimeDiff
 {
@@ -280,7 +279,10 @@ class TimeDiff
     }
 }
 
-$a = new TimeDiff("2013-12-14","2017-10-25");
+$firstDate = $_GET['date1'];
+$secondDate = $_GET['date2'];
+
+$a = new TimeDiff($firstDate,$secondDate);
 $a->showResult();
 
 
