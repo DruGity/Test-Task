@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Магический Квадрат</title>
+</head>
+<body>
+    <div class="form-group col-md-6">
+    <form action = "cezar.php" method="get" >
+    <label for="date1">Date 1</label><br>
+    <input class="form-control col-md-3" type="datetime" id = "date1" name="date1" ><br><br>
+    <label for="date2">Date 2</label><br>
+    <input class="form-control col-md-3" type="datetime" id = "date2" name="date2" ><br><br>
+    <button class="btn btn-primary" type="submit" name="encode" value ="Encode">Calculate</button>
+</div>
+</form> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.js" type="text/javascript"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+
+<script>
+$(function() {
+  //задание заполнителя с помощью параметра placeholder
+  $("#date1").mask("9999-99-99", {placeholder: "yyyy-mm-dd" });
+  $("#date2").mask("9999-99-99", {placeholder: "yyyy-mm-dd" });
+});
+</script>
